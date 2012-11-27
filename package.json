@@ -1,0 +1,20 @@
+{
+    "name": "sideproject",
+  	"version": "0.0.1",
+  	"dependencies": {
+        "bootstrap-stylus": "latest",
+        "connect-flash": "latest",
+        "debug": "latest",
+        "express": "3.0.x",
+        "jade": ">= 0.0.1",
+        "mongode": "latest",
+        "passport": "latest",
+        "passport-local": "latest",
+        "stylus": "latest",
+        "underscore": "latest"
+  	},
+    "engines": {
+      "node": "0.8.x",
+      "npm": "1.1.x"
+    }
+}

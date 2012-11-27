@@ -1,0 +1,37 @@
+!!!
+html
+  head
+    title Sideproject - People Making Awesome
+    block styles
+      link(rel='stylesheet', href='public/css/style.css')
+    block scripts
+
+  body
+    block header
+      h1: a(href='/') Sideproject. 
+      ul#header-nav
+        - if (typeof user === 'undefined')
+            li: a(href='/signup') Sign Up
+            li: a(href='/login') Log In
+        - else
+            li: a(href='/me')= user.email
+            li: a(href='/logout') Sign Out
+
+  block flash
+    - if (typeof flash !== 'undefined')
+        #flash-messages
+            if flash.success
+              #flash.success #{flash.success[0]}
+            if flash.info
+              #flash.info #{flash.info[0]}
+            if flash.error
+              #flash.error #{flash.error[0]}
+
+  block content
+    h2 Content
+    p This is the default content block from layout.jade
+
+  block footer
+    #footer
+      h2 Footer
+      p This is the default footer block from layout.jade
