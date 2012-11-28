@@ -12,9 +12,14 @@ Sideproject gives you a simple Express based app to get started. It's ready to b
 - Jade Templates
 - Stylus
 - Stylus-Bootstrap
-- Passport (authentication)
+- Passport Authentication
 - Connect-Sessions
 
 ## Auth
 
-Passport (npm install passport) based
+Passport (npm install passport) based. Uses LocalStrategy (passport-local) out of the box.
+
+Facebook and Twitter support are available via the appropriate passport npm packages.
+
+Note: passwords are currently stored in PLAINTEXT. If you'd like to do something more sane with
+salting and hashing and such, you can modify LocalStrategy in `auth.js`
